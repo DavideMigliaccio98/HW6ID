@@ -1,0 +1,54 @@
+{
+  "creation_date": "2026-02-02 12:26:40",
+  "method": "Dedupe ML Classification",
+  "model": "RandomForest",
+  "training_time_seconds": 0.11797404289245605,
+  "feature_columns": [
+    "manufacturer_sim",
+    "model_sim",
+    "year_match",
+    "year_diff",
+    "price_sim",
+    "price_ratio",
+    "mileage_sim",
+    "mileage_ratio",
+    "fuel_match",
+    "transmission_match"
+  ],
+  "B1_Dedupe": {
+    "blocking_strategy": "Manufacturer + Model",
+    "total_candidates": 964002,
+    "predicted_matches": 76988,
+    "precision": 0.029991687016158362,
+    "recall": 1.0,
+    "f1_score": 0.058236755488858344,
+    "confusion_matrix": {
+      "tp": 2309,
+      "tn": 887014,
+      "fp": 74679,
+      "fn": 0
+    },
+    "timing": {
+      "feature_seconds": 63.59306621551514,
+      "inference_seconds": 0.5021464824676514
+    }
+  },
+  "B2_Dedupe": {
+    "blocking_strategy": "Manufacturer + Model + Year",
+    "total_candidates": 77087,
+    "predicted_matches": 76988,
+    "precision": 0.029991687016158362,
+    "recall": 1.0,
+    "f1_score": 0.058236755488858344,
+    "confusion_matrix": {
+      "tp": 2309,
+      "tn": 99,
+      "fp": 74679,
+      "fn": 0
+    },
+    "timing": {
+      "feature_seconds": 5.024739742279053,
+      "inference_seconds": 0.05386543273925781
+    }
+  }
+}

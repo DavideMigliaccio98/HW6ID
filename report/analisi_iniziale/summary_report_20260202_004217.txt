@@ -1,0 +1,21 @@
+====================================================================================================
+REPORT ANALISI INIZIALE DATASET AUTO USATE
+Generato il: 2026-02-02 00:42:17
+====================================================================================================
+
+DATASET 1 - VEHICLES (Craigslist)
+----------------------------------------------------------------------------------------------------
+Totale righe: 426,880
+Totale colonne: 26
+Attributi con valori nulli: 20 / 26
+Percentuale media valori nulli: 14.91%
+Media valori unici per attributo: 85177
+
+DATASET 2 - USED CARS (US)
+----------------------------------------------------------------------------------------------------
+Totale righe: 3,000,040
+Totale colonne: 66
+Attributi con valori nulli: 49 / 66
+Percentuale media valori nulli: 21.32%
+Media valori unici per attributo: 178269
+

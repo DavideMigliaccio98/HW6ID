@@ -1,0 +1,42 @@
+====================================================================================================
+REPORT ALLINEAMENTO DATASET ALLO SCHEMA MEDIATO
+Generato il: 2026-02-02 09:59:58
+====================================================================================================
+
+DATASET ALLINEATI:
+----------------------------------------------------------------------------------------------------
+Craigslist: 426,880 righe × 20 colonne
+Used Cars: 3,000,040 righe × 20 colonne
+Schema finale unificato: 20 attributi
+
+TRASFORMAZIONI APPLICATE:
+----------------------------------------------------------------------------------------------------
+- Normalizzazione stringhe: .upper(), .title(), .lower(), .strip()
+- Conversione tipi numerici: pd.to_numeric() con errors='coerce'
+- Estrazione pattern: numero cilindri, stati da zip code
+- Conversione datetime: UTC-aware timestamps
+- Attributi booleani: salvage_title, has_accidents, frame_damaged, is_new
+- Attributi derivati: salvage_title da title_status
+
+SCHEMA FINALE (ALFABETICO):
+----------------------------------------------------------------------------------------------------
+ 1. body_type                            Craigslist: ✗  Used Cars: ✓
+ 2. cylinders                            Craigslist: ✓  Used Cars: ✗
+ 3. description                          Craigslist: ✓  Used Cars: ✓
+ 4. drive_type                           Craigslist: ✗  Used Cars: ✗
+ 5. exterior_color                       Craigslist: ✗  Used Cars: ✓
+ 6. fuel_type                            Craigslist: ✗  Used Cars: ✓
+ 7. image_url                            Craigslist: ✓  Used Cars: ✗
+ 8. latitude                             Craigslist: ✗  Used Cars: ✓
+ 9. listing_date                         Craigslist: ✗  Used Cars: ✗
+10. location                             Craigslist: ✗  Used Cars: ✗
+11. longitude                            Craigslist: ✗  Used Cars: ✓
+12. manufacturer                         Craigslist: ✓  Used Cars: ✗
+13. mileage                              Craigslist: ✗  Used Cars: ✓
+14. model                                Craigslist: ✓  Used Cars: ✗
+15. price                                Craigslist: ✓  Used Cars: ✓
+16. source_dataset                       Craigslist: ✗  Used Cars: ✗
+17. transmission                         Craigslist: ✓  Used Cars: ✓
+18. vehicle_id                           Craigslist: ✗  Used Cars: ✗
+19. vin                                  Craigslist: ✗  Used Cars: ✓
+20. year                                 Craigslist: ✓  Used Cars: ✓

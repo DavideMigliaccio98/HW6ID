@@ -1,0 +1,62 @@
+====================================================================================================
+RECORD LINKAGE EVALUATION REPORT
+Generato il: 2026-02-02 11:40:28
+====================================================================================================
+
+METODO: Record Linkage con regole threshold-based
+----------------------------------------------------------------------------------------------------
+Regole applicate:
+  - manufacturer_sim >= 0.85 (Jaro-Winkler)
+  - model_sim >= 0.80 (Jaro-Winkler)
+  - year_match == 1 (exact match)
+  - Almeno 1 attributo aggiuntivo con alta similarità
+
+1. PIPELINE B1-RecordLinkage (Blocking: Manufacturer + Model)
+----------------------------------------------------------------------------------------------------
+Coppie candidate: 964,002
+Match predetti: 73,180
+
+Metriche:
+  Precision: 0.0313
+  Recall: 0.9909
+  F1-Score: 0.0606
+
+Confusion Matrix:
+  TP: 2,288, TN: 890,801
+  FP: 70,892, FN: 21
+
+Tempi:
+  Features: 1.32s
+  Inferenza: 0.0290s
+  Totale: 1.35s
+
+2. PIPELINE B2-RecordLinkage (Blocking: Manufacturer + Model + Year)
+----------------------------------------------------------------------------------------------------
+Coppie candidate: 77,087
+Match predetti: 73,180
+
+Metriche:
+  Precision: 0.0313
+  Recall: 0.9909
+  F1-Score: 0.0606
+
+Confusion Matrix:
+  TP: 2,288, TN: 3,886
+  FP: 70,892, FN: 21
+
+Tempi:
+  Features: 0.11s
+  Inferenza: 0.0040s
+  Totale: 0.12s
+
+3. CONFRONTO E RACCOMANDAZIONI
+----------------------------------------------------------------------------------------------------
+✅ MIGLIORE PIPELINE: B2-RecordLinkage
+   F1-Score: 0.0606 > 0.0606
+   Maggiore efficienza: meno coppie candidate
+
+Considerazioni:
+  - Record Linkage con regole threshold fornisce classificazione deterministica
+  - Tempi di inferenza molto bassi (< 1 secondo)
+  - Trade-off precision/recall dipende dalle soglie scelte
+  - Possibile ottimizzare threshold per migliorare metriche

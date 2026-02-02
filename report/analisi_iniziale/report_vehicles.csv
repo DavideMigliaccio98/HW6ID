@@ -1,0 +1,27 @@
+Attributo,Tipo,Valori Nulli,Null %,Valori Unici,Unicità %
+id,int64,0,0.0,426880,100.0
+url,str,0,0.0,426880,100.0
+region,str,0,0.0,404,0.09
+region_url,str,0,0.0,413,0.1
+price,int64,0,0.0,15655,3.67
+year,float64,1205,0.28,114,0.03
+manufacturer,str,17646,4.13,42,0.01
+model,str,5277,1.24,29667,6.95
+condition,str,174104,40.79,6,0.0
+cylinders,str,177678,41.62,8,0.0
+fuel,str,3013,0.71,5,0.0
+odometer,float64,4400,1.03,104870,24.57
+title_status,str,8242,1.93,6,0.0
+transmission,str,2556,0.6,3,0.0
+VIN,str,161042,37.73,118264,27.7
+drive,str,130567,30.59,3,0.0
+size,str,306361,71.77,4,0.0
+type,str,92858,21.75,13,0.0
+paint_color,str,130203,30.5,12,0.0
+image_url,str,68,0.02,241899,56.67
+description,str,70,0.02,360911,84.55
+county,float64,426880,100.0,0,0.0
+state,str,0,0.0,51,0.01
+lat,float64,6549,1.53,53181,12.46
+long,float64,6549,1.53,53772,12.6
+posting_date,str,68,0.02,381536,89.38

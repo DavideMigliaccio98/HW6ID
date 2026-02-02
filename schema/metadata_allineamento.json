@@ -1,0 +1,113 @@
+{
+  "creation_date": "2026-02-02 09:59:57",
+  "datasets": {
+    "craigslist": {
+      "rows": 426880,
+      "original_columns": 26,
+      "aligned_columns": 20
+    },
+    "used_cars": {
+      "rows": 3000040,
+      "original_columns": 66,
+      "aligned_columns": 20
+    }
+  },
+  "schema": {
+    "total_attributes": 20,
+    "attributes": [
+      "body_type",
+      "cylinders",
+      "description",
+      "drive_type",
+      "exterior_color",
+      "fuel_type",
+      "image_url",
+      "latitude",
+      "listing_date",
+      "location",
+      "longitude",
+      "manufacturer",
+      "mileage",
+      "model",
+      "price",
+      "source_dataset",
+      "transmission",
+      "vehicle_id",
+      "vin",
+      "year"
+    ]
+  },
+  "transformations_applied": {
+    "string_normalization": [
+      "upper",
+      "title",
+      "lower",
+      "strip"
+    ],
+    "numeric_conversion": [
+      "pd.to_numeric with error handling"
+    ],
+    "pattern_extraction": [
+      "cylinders extraction",
+      "state from zip code"
+    ],
+    "datetime_conversion": [
+      "listing_date to UTC datetime"
+    ],
+    "boolean_conversion": [
+      "salvage_title",
+      "has_accidents",
+      "frame_damaged",
+      "is_new"
+    ],
+    "derived_attributes": [
+      "salvage_title from title_status"
+    ]
+  },
+  "data_quality": {
+    "craigslist_completeness": {
+      "body_type": "78.2%",
+      "cylinders": "58.1%",
+      "description": "100.0%",
+      "drive_type": "69.4%",
+      "exterior_color": "69.5%",
+      "fuel_type": "99.3%",
+      "image_url": "100.0%",
+      "latitude": "98.5%",
+      "listing_date": "100.0%",
+      "location": "100.0%",
+      "longitude": "98.5%",
+      "manufacturer": "95.9%",
+      "mileage": "99.0%",
+      "model": "98.8%",
+      "price": "100.0%",
+      "source_dataset": "100.0%",
+      "transmission": "99.4%",
+      "vehicle_id": "100.0%",
+      "vin": "62.3%",
+      "year": "99.7%"
+    },
+    "used_cars_completeness": {
+      "body_type": "99.5%",
+      "cylinders": "96.6%",
+      "description": "97.4%",
+      "drive_type": "95.1%",
+      "exterior_color": "98.3%",
+      "fuel_type": "97.2%",
+      "image_url": "87.7%",
+      "latitude": "100.0%",
+      "listing_date": "100.0%",
+      "location": "100.0%",
+      "longitude": "100.0%",
+      "manufacturer": "100.0%",
+      "mileage": "95.2%",
+      "model": "100.0%",
+      "price": "100.0%",
+      "source_dataset": "100.0%",
+      "transmission": "97.9%",
+      "vehicle_id": "100.0%",
+      "vin": "100.0%",
+      "year": "100.0%"
+    }
+  }
+}

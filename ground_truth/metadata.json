@@ -1,0 +1,53 @@
+{
+  "creation_date": "2026-02-02 10:52:25",
+  "strategy": "VIN-based matching with deduplication, anti-noise filter, and negative sampling",
+  "deduplication": {
+    "craigslist_before": 426880,
+    "craigslist_after": 117127,
+    "craigslist_duplicates_removed": 309753,
+    "used_cars_before": 3000040,
+    "used_cars_after": 2996915,
+    "used_cars_duplicates_removed": 3125
+  },
+  "ground_truth_labeled": {
+    "total_pairs": 15412,
+    "positive_pairs": 3853,
+    "negative_pairs": 11559,
+    "negative_ratio": "3:1"
+  },
+  "datasets_coverage": {
+    "craigslist": {
+      "total_records": 426880,
+      "records_with_valid_vin": 117127,
+      "records_in_ground_truth": 14492
+    },
+    "used_cars": {
+      "total_records": 3000040,
+      "records_with_valid_vin": 2996915,
+      "records_in_ground_truth": 15375
+    }
+  },
+  "validation_criteria": {
+    "year_matching": "exact",
+    "manufacturer_matching": "substring (anti-noise filter)",
+    "price_tolerance": "±$5000 or ±50%",
+    "mileage_tolerance": "±10000 miles or ±20%"
+  },
+  "statistics_positive_matches": {
+    "unique_manufacturers": 36,
+    "year_range": [
+      1982,
+      2021
+    ],
+    "price_range_cr": [
+      0.0,
+      990000.0
+    ],
+    "mileage_range_cr": [
+      0.0,
+      398654.0
+    ],
+    "matches_with_warnings": 394,
+    "perfect_matches": 3459
+  }
+}

@@ -1,0 +1,42 @@
+====================================================================================================
+BLOCKING STRATEGIES EVALUATION REPORT
+Generato il: 2026-02-02 11:21:39
+====================================================================================================
+
+1. DATI SORGENTE
+----------------------------------------------------------------------------------------------------
+Dataset A (Craigslist): 14,492 record
+Dataset B (Used Cars): 15,375 record
+Prodotto cartesiano: 222,814,500 confronti
+Ground-Truth positives: 3,853 coppie
+
+2. STRATEGIA B1: Manufacturer + Model
+----------------------------------------------------------------------------------------------------
+Coppie candidate: 964,002
+Veri match trovati: 2,309
+Veri match persi: 1,544
+Pairs Completeness (PC): 59.93%
+Pairs Quality (PQ): 0.24%
+Reduction Ratio (RR): 99.57%
+F1-Score: 0.48%
+
+3. STRATEGIA B2: Manufacturer + Model + Year
+----------------------------------------------------------------------------------------------------
+Coppie candidate: 77,087
+Veri match trovati: 2,309
+Veri match persi: 1,544
+Pairs Completeness (PC): 59.93%
+Pairs Quality (PQ): 3.00%
+Reduction Ratio (RR): 99.97%
+F1-Score: 5.71%
+
+4. CONFRONTO E RACCOMANDAZIONI
+----------------------------------------------------------------------------------------------------
+✅ RACCOMANDAZIONE: B2 (Manufacturer + Model + Year)
+   F1-Score superiore indica miglior bilanciamento recall/precision
+   Maggiore efficienza computazionale (100.0% vs 99.6%)
+
+Considerazioni:
+  - B1 è più permissivo: maggiore recall, cattura più match
+  - B2 è più efficiente: meno confronti, blocchi più piccoli
+  - Scelta dipende da priorità: recall vs efficienza

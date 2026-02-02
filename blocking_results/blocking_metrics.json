@@ -1,0 +1,29 @@
+{
+  "creation_date": "2026-02-02 14:56:31",
+  "dataset_info": {
+    "dataset_A_size": 14492,
+    "dataset_B_size": 15375,
+    "cartesian_product": 222814500,
+    "ground_truth_positives": 3853
+  },
+  "B1_manufacturer_model": {
+    "blocking_key": "manufacturer + model",
+    "total_candidates": 964002,
+    "true_matches_found": 2309,
+    "true_matches_missed": 1544,
+    "pairs_completeness_pct": 59.92732935375032,
+    "pairs_quality_pct": 0.23952232464248,
+    "reduction_ratio_pct": 99.56735221451028,
+    "f1_score_pct": 0.4771375877584969
+  },
+  "B2_manufacturer_model_year": {
+    "blocking_key": "manufacturer + model + year",
+    "total_candidates": 77087,
+    "true_matches_found": 2309,
+    "true_matches_missed": 1544,
+    "pairs_completeness_pct": 59.92732935375032,
+    "pairs_quality_pct": 2.99531697951665,
+    "reduction_ratio_pct": 99.96540305949569,
+    "f1_score_pct": 5.705460835186558
+  }
+}

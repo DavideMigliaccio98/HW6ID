@@ -1,0 +1,99 @@
+{
+  "model": "distilbert",
+  "n_epochs": 10,
+  "batch_size": 32,
+  "max_len": 128,
+  "learning_rate": 3e-05,
+  "device": "cuda",
+  "training_time_seconds": 84.07272934913635,
+  "B1": {
+    "inference_time_seconds": 406.29426646232605,
+    "num_candidates": 964002,
+    "results_by_threshold": [
+      {
+        "threshold": 0.3,
+        "precision": 0.010295004144374953,
+        "recall": 0.9270568278201866,
+        "f1": 0.02036386671262355,
+        "accuracy": 0.7818241040993691,
+        "tp": 2186,
+        "fp": 210150,
+        "tn": 751494,
+        "fn": 172,
+        "total_positives_gt": 2358,
+        "predicted_positives": 212336
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0.012675772689040788,
+        "recall": 0.90754877014419,
+        "f1": 0.025002336666978223,
+        "accuracy": 0.8268634297439217,
+        "tp": 2140,
+        "fp": 166686,
+        "tn": 794958,
+        "fn": 218,
+        "total_positives_gt": 2358,
+        "predicted_positives": 168826
+      },
+      {
+        "threshold": 0.7,
+        "precision": 0.0158211991922382,
+        "recall": 0.8837998303647159,
+        "f1": 0.031085918854415275,
+        "accuracy": 0.865236794114535,
+        "tp": 2084,
+        "fp": 129638,
+        "tn": 832006,
+        "fn": 274,
+        "total_positives_gt": 2358,
+        "predicted_positives": 131722
+      }
+    ]
+  },
+  "B2": {
+    "inference_time_seconds": 34.32556438446045,
+    "num_candidates": 77087,
+    "results_by_threshold": [
+      {
+        "threshold": 0.3,
+        "precision": 0.057627657039997886,
+        "recall": 0.9424242424242424,
+        "f1": 0.10861376506099234,
+        "accuracy": 0.5364588062838092,
+        "tp": 2177,
+        "fp": 35600,
+        "tn": 39177,
+        "fn": 133,
+        "total_positives_gt": 2310,
+        "predicted_positives": 37777
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0.0675573002405977,
+        "recall": 0.9238095238095239,
+        "f1": 0.12590713316419846,
+        "accuracy": 0.6156290943998339,
+        "tp": 2134,
+        "fp": 29454,
+        "tn": 45323,
+        "fn": 176,
+        "total_positives_gt": 2310,
+        "predicted_positives": 31588
+      },
+      {
+        "threshold": 0.7,
+        "precision": 0.08036610797868232,
+        "recall": 0.9008658008658008,
+        "f1": 0.14756772089065381,
+        "accuracy": 0.688118619222437,
+        "tp": 2081,
+        "fp": 23813,
+        "tn": 50964,
+        "fn": 229,
+        "total_positives_gt": 2310,
+        "predicted_positives": 25894
+      }
+    ]
+  }
+}
