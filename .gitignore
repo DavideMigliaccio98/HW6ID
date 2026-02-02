@@ -51,9 +51,15 @@ model.pt
 ditto_results/events.out.*
 ditto_results/*/events.out.*
 
-# Large data files (optional - uncomment if you want to exclude datasets)
-# dataset/*.csv
-# ground_truth/*.csv
+# Large data files - EXCLUDE from repository
+dataset/*.csv
+ground_truth/*.csv
+blocking_results/*.csv
+dedupe_results/*.csv
+ditto_results/*.csv
+record_linkage_results/*.csv
+report/**/*.csv
+schema/*.csv
 
 # Temporary files
 *.tmp
