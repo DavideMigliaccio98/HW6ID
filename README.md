@@ -64,6 +64,20 @@ HW6ID/
 
 ---
 
+## ⚠️ SETUP INIZIALE - IMPORTANTE!
+
+**I dataset originali CSV NON sono inclusi nel repository** (troppo grandi per GitHub).
+
+📥 **Prima di eseguire i notebook, segui le istruzioni in**:
+### 👉 [DATASET_SETUP.md](DATASET_SETUP.md) 👈
+
+Oppure esegui lo script di verifica:
+```bash
+python verify_setup.py
+```
+
+---
+
 ## 🚀 Ordine di Esecuzione (Procedura Completa)
 
 ### **FASE 1: Preparazione Dati**
